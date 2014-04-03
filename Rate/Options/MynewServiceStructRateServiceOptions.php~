@@ -1,0 +1,283 @@
+<?php
+/**
+ * File for class MynewServiceStructRateServiceOptions
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructRateServiceOptions originally named RateServiceOptions
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructRateServiceOptions extends MynewServiceWsdlClass
+{
+    /**
+     * The additionalParameters
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructAdditionalParameters
+     */
+    public $additionalParameters;
+    /**
+     * The carbonNeutralIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $carbonNeutralIndicator;
+    /**
+     * The codIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $codIndicator;
+    /**
+     * The confirmDeliveryIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $confirmDeliveryIndicator;
+    /**
+     * The deliveryOnSatIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $deliveryOnSatIndicator;
+    /**
+     * The handlingChargeIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $handlingChargeIndicator;
+    /**
+     * The returnLabelIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $returnLabelIndicator;
+    /**
+     * The schedulePickupIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $schedulePickupIndicator;
+    /**
+     * The shipmentType
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $shipmentType;
+    /**
+     * Constructor method for RateServiceOptions
+     * @see parent::__construct()
+     * @param MynewServiceStructAdditionalParameters $_additionalParameters
+     * @param string $_carbonNeutralIndicator
+     * @param string $_codIndicator
+     * @param string $_confirmDeliveryIndicator
+     * @param string $_deliveryOnSatIndicator
+     * @param string $_handlingChargeIndicator
+     * @param string $_returnLabelIndicator
+     * @param string $_schedulePickupIndicator
+     * @param string $_shipmentType
+     * @return MynewServiceStructRateServiceOptions
+     */
+    public function __construct($_additionalParameters = NULL,$_carbonNeutralIndicator = NULL,$_codIndicator = NULL,$_confirmDeliveryIndicator = NULL,$_deliveryOnSatIndicator = NULL,$_handlingChargeIndicator = NULL,$_returnLabelIndicator = NULL,$_schedulePickupIndicator = NULL,$_shipmentType = NULL)
+    {
+        parent::__construct(array('additionalParameters'=>$_additionalParameters,'carbonNeutralIndicator'=>$_carbonNeutralIndicator,'codIndicator'=>$_codIndicator,'confirmDeliveryIndicator'=>$_confirmDeliveryIndicator,'deliveryOnSatIndicator'=>$_deliveryOnSatIndicator,'handlingChargeIndicator'=>$_handlingChargeIndicator,'returnLabelIndicator'=>$_returnLabelIndicator,'schedulePickupIndicator'=>$_schedulePickupIndicator,'shipmentType'=>$_shipmentType),false);
+    }
+    /**
+     * Get additionalParameters value
+     * @return MynewServiceStructAdditionalParameters|null
+     */
+    public function getAdditionalParameters()
+    {
+        return $this->additionalParameters;
+    }
+    /**
+     * Set additionalParameters value
+     * @param MynewServiceStructAdditionalParameters $_additionalParameters the additionalParameters
+     * @return MynewServiceStructAdditionalParameters
+     */
+    public function setAdditionalParameters($_additionalParameters)
+    {
+        return ($this->additionalParameters = $_additionalParameters);
+    }
+    /**
+     * Get carbonNeutralIndicator value
+     * @return string|null
+     */
+    public function getCarbonNeutralIndicator()
+    {
+        return $this->carbonNeutralIndicator;
+    }
+    /**
+     * Set carbonNeutralIndicator value
+     * @param string $_carbonNeutralIndicator the carbonNeutralIndicator
+     * @return string
+     */
+    public function setCarbonNeutralIndicator($_carbonNeutralIndicator)
+    {
+        return ($this->carbonNeutralIndicator = $_carbonNeutralIndicator);
+    }
+    /**
+     * Get codIndicator value
+     * @return string|null
+     */
+    public function getCodIndicator()
+    {
+        return $this->codIndicator;
+    }
+    /**
+     * Set codIndicator value
+     * @param string $_codIndicator the codIndicator
+     * @return string
+     */
+    public function setCodIndicator($_codIndicator)
+    {
+        return ($this->codIndicator = $_codIndicator);
+    }
+    /**
+     * Get confirmDeliveryIndicator value
+     * @return string|null
+     */
+    public function getConfirmDeliveryIndicator()
+    {
+        return $this->confirmDeliveryIndicator;
+    }
+    /**
+     * Set confirmDeliveryIndicator value
+     * @param string $_confirmDeliveryIndicator the confirmDeliveryIndicator
+     * @return string
+     */
+    public function setConfirmDeliveryIndicator($_confirmDeliveryIndicator)
+    {
+        return ($this->confirmDeliveryIndicator = $_confirmDeliveryIndicator);
+    }
+    /**
+     * Get deliveryOnSatIndicator value
+     * @return string|null
+     */
+    public function getDeliveryOnSatIndicator()
+    {
+        return $this->deliveryOnSatIndicator;
+    }
+    /**
+     * Set deliveryOnSatIndicator value
+     * @param string $_deliveryOnSatIndicator the deliveryOnSatIndicator
+     * @return string
+     */
+    public function setDeliveryOnSatIndicator($_deliveryOnSatIndicator)
+    {
+        return ($this->deliveryOnSatIndicator = $_deliveryOnSatIndicator);
+    }
+    /**
+     * Get handlingChargeIndicator value
+     * @return string|null
+     */
+    public function getHandlingChargeIndicator()
+    {
+        return $this->handlingChargeIndicator;
+    }
+    /**
+     * Set handlingChargeIndicator value
+     * @param string $_handlingChargeIndicator the handlingChargeIndicator
+     * @return string
+     */
+    public function setHandlingChargeIndicator($_handlingChargeIndicator)
+    {
+        return ($this->handlingChargeIndicator = $_handlingChargeIndicator);
+    }
+    /**
+     * Get returnLabelIndicator value
+     * @return string|null
+     */
+    public function getReturnLabelIndicator()
+    {
+        return $this->returnLabelIndicator;
+    }
+    /**
+     * Set returnLabelIndicator value
+     * @param string $_returnLabelIndicator the returnLabelIndicator
+     * @return string
+     */
+    public function setReturnLabelIndicator($_returnLabelIndicator)
+    {
+        return ($this->returnLabelIndicator = $_returnLabelIndicator);
+    }
+    /**
+     * Get schedulePickupIndicator value
+     * @return string|null
+     */
+    public function getSchedulePickupIndicator()
+    {
+        return $this->schedulePickupIndicator;
+    }
+    /**
+     * Set schedulePickupIndicator value
+     * @param string $_schedulePickupIndicator the schedulePickupIndicator
+     * @return string
+     */
+    public function setSchedulePickupIndicator($_schedulePickupIndicator)
+    {
+        return ($this->schedulePickupIndicator = $_schedulePickupIndicator);
+    }
+    /**
+     * Get shipmentType value
+     * @return string|null
+     */
+    public function getShipmentType()
+    {
+        return $this->shipmentType;
+    }
+    /**
+     * Set shipmentType value
+     * @param string $_shipmentType the shipmentType
+     * @return string
+     */
+    public function setShipmentType($_shipmentType)
+    {
+        return ($this->shipmentType = $_shipmentType);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructRateServiceOptions
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

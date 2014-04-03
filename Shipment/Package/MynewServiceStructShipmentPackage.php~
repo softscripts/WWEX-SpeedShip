@@ -1,0 +1,439 @@
+<?php
+/**
+ * File for class MynewServiceStructShipmentPackage
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructShipmentPackage originally named ShipmentPackage
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructShipmentPackage extends MynewServiceWsdlClass
+{
+    /**
+     * The additionalParameters
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructAdditionalParameters
+     */
+    public $additionalParameters;
+    /**
+     * The additonalHandling
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $additonalHandling;
+    /**
+     * The codPaymentForm
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $codPaymentForm;
+    /**
+     * The codValue
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $codValue;
+    /**
+     * The confirmDeliveryOption
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $confirmDeliveryOption;
+    /**
+     * The handlingChargeAmount
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $handlingChargeAmount;
+    /**
+     * The handlingChargeUOM
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $handlingChargeUOM;
+    /**
+     * The height
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $height;
+    /**
+     * The insuranceValue
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $insuranceValue;
+    /**
+     * The largePackage
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $largePackage;
+    /**
+     * The length
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $length;
+    /**
+     * The packageNumber
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $packageNumber;
+    /**
+     * The packageType
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $packageType;
+    /**
+     * The weight
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $weight;
+    /**
+     * The width
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $width;
+    /**
+     * Constructor method for ShipmentPackage
+     * @see parent::__construct()
+     * @param MynewServiceStructAdditionalParameters $_additionalParameters
+     * @param string $_additonalHandling
+     * @param string $_codPaymentForm
+     * @param string $_codValue
+     * @param string $_confirmDeliveryOption
+     * @param string $_handlingChargeAmount
+     * @param string $_handlingChargeUOM
+     * @param string $_height
+     * @param string $_insuranceValue
+     * @param string $_largePackage
+     * @param string $_length
+     * @param string $_packageNumber
+     * @param string $_packageType
+     * @param string $_weight
+     * @param string $_width
+     * @return MynewServiceStructShipmentPackage
+     */
+    public function __construct($_additionalParameters = NULL,$_additonalHandling = NULL,$_codPaymentForm = NULL,$_codValue = NULL,$_confirmDeliveryOption = NULL,$_handlingChargeAmount = NULL,$_handlingChargeUOM = NULL,$_height = NULL,$_insuranceValue = NULL,$_largePackage = NULL,$_length = NULL,$_packageNumber = NULL,$_packageType = NULL,$_weight = NULL,$_width = NULL)
+    {
+        parent::__construct(array('additionalParameters'=>$_additionalParameters,'additonalHandling'=>$_additonalHandling,'codPaymentForm'=>$_codPaymentForm,'codValue'=>$_codValue,'confirmDeliveryOption'=>$_confirmDeliveryOption,'handlingChargeAmount'=>$_handlingChargeAmount,'handlingChargeUOM'=>$_handlingChargeUOM,'height'=>$_height,'insuranceValue'=>$_insuranceValue,'largePackage'=>$_largePackage,'length'=>$_length,'packageNumber'=>$_packageNumber,'packageType'=>$_packageType,'weight'=>$_weight,'width'=>$_width),false);
+    }
+    /**
+     * Get additionalParameters value
+     * @return MynewServiceStructAdditionalParameters|null
+     */
+    public function getAdditionalParameters()
+    {
+        return $this->additionalParameters;
+    }
+    /**
+     * Set additionalParameters value
+     * @param MynewServiceStructAdditionalParameters $_additionalParameters the additionalParameters
+     * @return MynewServiceStructAdditionalParameters
+     */
+    public function setAdditionalParameters($_additionalParameters)
+    {
+        return ($this->additionalParameters = $_additionalParameters);
+    }
+    /**
+     * Get additonalHandling value
+     * @return string|null
+     */
+    public function getAdditonalHandling()
+    {
+        return $this->additonalHandling;
+    }
+    /**
+     * Set additonalHandling value
+     * @param string $_additonalHandling the additonalHandling
+     * @return string
+     */
+    public function setAdditonalHandling($_additonalHandling)
+    {
+        return ($this->additonalHandling = $_additonalHandling);
+    }
+    /**
+     * Get codPaymentForm value
+     * @return string|null
+     */
+    public function getCodPaymentForm()
+    {
+        return $this->codPaymentForm;
+    }
+    /**
+     * Set codPaymentForm value
+     * @param string $_codPaymentForm the codPaymentForm
+     * @return string
+     */
+    public function setCodPaymentForm($_codPaymentForm)
+    {
+        return ($this->codPaymentForm = $_codPaymentForm);
+    }
+    /**
+     * Get codValue value
+     * @return string|null
+     */
+    public function getCodValue()
+    {
+        return $this->codValue;
+    }
+    /**
+     * Set codValue value
+     * @param string $_codValue the codValue
+     * @return string
+     */
+    public function setCodValue($_codValue)
+    {
+        return ($this->codValue = $_codValue);
+    }
+    /**
+     * Get confirmDeliveryOption value
+     * @return string|null
+     */
+    public function getConfirmDeliveryOption()
+    {
+        return $this->confirmDeliveryOption;
+    }
+    /**
+     * Set confirmDeliveryOption value
+     * @param string $_confirmDeliveryOption the confirmDeliveryOption
+     * @return string
+     */
+    public function setConfirmDeliveryOption($_confirmDeliveryOption)
+    {
+        return ($this->confirmDeliveryOption = $_confirmDeliveryOption);
+    }
+    /**
+     * Get handlingChargeAmount value
+     * @return string|null
+     */
+    public function getHandlingChargeAmount()
+    {
+        return $this->handlingChargeAmount;
+    }
+    /**
+     * Set handlingChargeAmount value
+     * @param string $_handlingChargeAmount the handlingChargeAmount
+     * @return string
+     */
+    public function setHandlingChargeAmount($_handlingChargeAmount)
+    {
+        return ($this->handlingChargeAmount = $_handlingChargeAmount);
+    }
+    /**
+     * Get handlingChargeUOM value
+     * @return string|null
+     */
+    public function getHandlingChargeUOM()
+    {
+        return $this->handlingChargeUOM;
+    }
+    /**
+     * Set handlingChargeUOM value
+     * @param string $_handlingChargeUOM the handlingChargeUOM
+     * @return string
+     */
+    public function setHandlingChargeUOM($_handlingChargeUOM)
+    {
+        return ($this->handlingChargeUOM = $_handlingChargeUOM);
+    }
+    /**
+     * Get height value
+     * @return string|null
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+    /**
+     * Set height value
+     * @param string $_height the height
+     * @return string
+     */
+    public function setHeight($_height)
+    {
+        return ($this->height = $_height);
+    }
+    /**
+     * Get insuranceValue value
+     * @return string|null
+     */
+    public function getInsuranceValue()
+    {
+        return $this->insuranceValue;
+    }
+    /**
+     * Set insuranceValue value
+     * @param string $_insuranceValue the insuranceValue
+     * @return string
+     */
+    public function setInsuranceValue($_insuranceValue)
+    {
+        return ($this->insuranceValue = $_insuranceValue);
+    }
+    /**
+     * Get largePackage value
+     * @return string|null
+     */
+    public function getLargePackage()
+    {
+        return $this->largePackage;
+    }
+    /**
+     * Set largePackage value
+     * @param string $_largePackage the largePackage
+     * @return string
+     */
+    public function setLargePackage($_largePackage)
+    {
+        return ($this->largePackage = $_largePackage);
+    }
+    /**
+     * Get length value
+     * @return string|null
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
+    /**
+     * Set length value
+     * @param string $_length the length
+     * @return string
+     */
+    public function setLength($_length)
+    {
+        return ($this->length = $_length);
+    }
+    /**
+     * Get packageNumber value
+     * @return string|null
+     */
+    public function getPackageNumber()
+    {
+        return $this->packageNumber;
+    }
+    /**
+     * Set packageNumber value
+     * @param string $_packageNumber the packageNumber
+     * @return string
+     */
+    public function setPackageNumber($_packageNumber)
+    {
+        return ($this->packageNumber = $_packageNumber);
+    }
+    /**
+     * Get packageType value
+     * @return string|null
+     */
+    public function getPackageType()
+    {
+        return $this->packageType;
+    }
+    /**
+     * Set packageType value
+     * @param string $_packageType the packageType
+     * @return string
+     */
+    public function setPackageType($_packageType)
+    {
+        return ($this->packageType = $_packageType);
+    }
+    /**
+     * Get weight value
+     * @return string|null
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+    /**
+     * Set weight value
+     * @param string $_weight the weight
+     * @return string
+     */
+    public function setWeight($_weight)
+    {
+        return ($this->weight = $_weight);
+    }
+    /**
+     * Get width value
+     * @return string|null
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+    /**
+     * Set width value
+     * @param string $_width the width
+     * @return string
+     */
+    public function setWidth($_width)
+    {
+        return ($this->width = $_width);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructShipmentPackage
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

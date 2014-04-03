@@ -1,0 +1,76 @@
+<?php
+/**
+ * File for class MynewServiceStructShipmentVoidDetails
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructShipmentVoidDetails originally named ShipmentVoidDetails
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructShipmentVoidDetails extends MynewServiceWsdlClass
+{
+    /**
+     * The shipmentVoidDetail
+     * Meta informations extracted from the WSDL
+     * - maxOccurs : unbounded
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructShipmentVoidDetail
+     */
+    public $shipmentVoidDetail;
+    /**
+     * Constructor method for ShipmentVoidDetails
+     * @see parent::__construct()
+     * @param MynewServiceStructShipmentVoidDetail $_shipmentVoidDetail
+     * @return MynewServiceStructShipmentVoidDetails
+     */
+    public function __construct($_shipmentVoidDetail = NULL)
+    {
+        parent::__construct(array('shipmentVoidDetail'=>$_shipmentVoidDetail),false);
+    }
+    /**
+     * Get shipmentVoidDetail value
+     * @return MynewServiceStructShipmentVoidDetail|null
+     */
+    public function getShipmentVoidDetail()
+    {
+        return $this->shipmentVoidDetail;
+    }
+    /**
+     * Set shipmentVoidDetail value
+     * @param MynewServiceStructShipmentVoidDetail $_shipmentVoidDetail the shipmentVoidDetail
+     * @return MynewServiceStructShipmentVoidDetail
+     */
+    public function setShipmentVoidDetail($_shipmentVoidDetail)
+    {
+        return ($this->shipmentVoidDetail = $_shipmentVoidDetail);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructShipmentVoidDetails
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

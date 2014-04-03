@@ -1,0 +1,153 @@
+<?php
+/**
+ * File for class MynewServiceStructUPSServiceDetailRequest
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructUPSServiceDetailRequest originally named UPSServiceDetailRequest
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructUPSServiceDetailRequest extends MynewServiceWsdlClass
+{
+    /**
+     * The serviceOptions
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructRateServiceOptions
+     */
+    public $serviceOptions;
+    /**
+     * The shipFrom
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructSimpleShipmentAddress
+     */
+    public $shipFrom;
+    /**
+     * The shipTo
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructSimpleShipmentAddress
+     */
+    public $shipTo;
+    /**
+     * The shipmentPackages
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructShipmentPackages
+     */
+    public $shipmentPackages;
+    /**
+     * Constructor method for UPSServiceDetailRequest
+     * @see parent::__construct()
+     * @param MynewServiceStructRateServiceOptions $_serviceOptions
+     * @param MynewServiceStructSimpleShipmentAddress $_shipFrom
+     * @param MynewServiceStructSimpleShipmentAddress $_shipTo
+     * @param MynewServiceStructShipmentPackages $_shipmentPackages
+     * @return MynewServiceStructUPSServiceDetailRequest
+     */
+    public function __construct($_serviceOptions = NULL,$_shipFrom = NULL,$_shipTo = NULL,$_shipmentPackages = NULL)
+    {
+        parent::__construct(array('serviceOptions'=>$_serviceOptions,'shipFrom'=>$_shipFrom,'shipTo'=>$_shipTo,'shipmentPackages'=>$_shipmentPackages),false);
+    }
+    /**
+     * Get serviceOptions value
+     * @return MynewServiceStructRateServiceOptions|null
+     */
+    public function getServiceOptions()
+    {
+        return $this->serviceOptions;
+    }
+    /**
+     * Set serviceOptions value
+     * @param MynewServiceStructRateServiceOptions $_serviceOptions the serviceOptions
+     * @return MynewServiceStructRateServiceOptions
+     */
+    public function setServiceOptions($_serviceOptions)
+    {
+        return ($this->serviceOptions = $_serviceOptions);
+    }
+    /**
+     * Get shipFrom value
+     * @return MynewServiceStructSimpleShipmentAddress|null
+     */
+    public function getShipFrom()
+    {
+        return $this->shipFrom;
+    }
+    /**
+     * Set shipFrom value
+     * @param MynewServiceStructSimpleShipmentAddress $_shipFrom the shipFrom
+     * @return MynewServiceStructSimpleShipmentAddress
+     */
+    public function setShipFrom($_shipFrom)
+    {
+        return ($this->shipFrom = $_shipFrom);
+    }
+    /**
+     * Get shipTo value
+     * @return MynewServiceStructSimpleShipmentAddress|null
+     */
+    public function getShipTo()
+    {
+        return $this->shipTo;
+    }
+    /**
+     * Set shipTo value
+     * @param MynewServiceStructSimpleShipmentAddress $_shipTo the shipTo
+     * @return MynewServiceStructSimpleShipmentAddress
+     */
+    public function setShipTo($_shipTo)
+    {
+        return ($this->shipTo = $_shipTo);
+    }
+    /**
+     * Get shipmentPackages value
+     * @return MynewServiceStructShipmentPackages|null
+     */
+    public function getShipmentPackages()
+    {
+        return $this->shipmentPackages;
+    }
+    /**
+     * Set shipmentPackages value
+     * @param MynewServiceStructShipmentPackages $_shipmentPackages the shipmentPackages
+     * @return MynewServiceStructShipmentPackages
+     */
+    public function setShipmentPackages($_shipmentPackages)
+    {
+        return ($this->shipmentPackages = $_shipmentPackages);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructUPSServiceDetailRequest
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

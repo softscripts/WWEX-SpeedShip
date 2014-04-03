@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://service.v1.speedship2.s3f.soapservice.ws.wwex.com" xmlns:ax28="http://ship.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax25="http://trackshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax21="http://voidshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax22="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax210="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.v1.speedship2.s3f.soapservice.ws.wwex.com">
+    <wsdl:types>
+        <xs:schema xmlns:ax22="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax214="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax27="http://trackshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax213="http://ship.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax24="http://voidshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.v1.speedship2.s3f.soapservice.ws.wwex.com">
+            <xs:import namespace="http://voidshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:import namespace="http://trackshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:import namespace="http://ship.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:import namespace="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+	    			<xs:import namespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/> 
+            <xs:element name="authenticationDetail">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="authenticationToken" nillable="true" type="ax22:AuthenticationToken"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>						           
+            <xs:element name="voidUPSShipment">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="voidShipmentRequest" nillable="true" type="ax24:VoidShipmentRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="voidUPSShipmentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="voidShipmentResponse" nillable="true" type="ax24:VoidShipmentResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trackUPSShipment">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="trackShipmentRequest" nillable="true" type="ax27:TrackShipmentRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trackUPSShipmentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="trackShipmentResponse" nillable="true" type="ax27:TrackShipmentResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shipUPSShipment">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="shipUPSRequest" nillable="true" type="ax213:ShipUPSRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shipUPSShipmentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="upsShipmentResponse" nillable="true" type="ax213:UPSShipmentResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shipRatedService">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="shipRatedServiceRequest" nillable="true" type="ax213:ShipRatedServiceRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shipRatedServiceResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="upsShipmentResponse" nillable="true" type="ax213:UPSShipmentResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUPSServiceDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="upsServiceDetailRequest" nillable="true" type="ax214:UPSServiceDetailRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUPSServiceDetailsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="upsServiceDetailResponse" nillable="true" type="ax214:UPSServiceDetailResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns:ax26="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://trackshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd">
+            <xs:import namespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:complexType name="TrackShipmentRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentNumbers" nillable="true" type="ax26:ShipmentNumbers"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TrackShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="serviceResponse" nillable="true" type="ax26:ResponseHeader"/>
+                    <xs:element minOccurs="0" name="shipmentTrackingDetails" nillable="true" type="ax25:ShipmentTrackingDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentTrackingDetails">
+                <xs:sequence/>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax29="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" xmlns:ax212="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ship.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd">
+            <xs:import namespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:import namespace="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:complexType name="ShipUPSRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billChargesToDetail" nillable="true" type="ax28:BillChargesToDetail"/>
+                    <xs:element minOccurs="0" name="emailShippingLabelDetail" nillable="true" type="ax28:EmailShippingLabelDetail"/>
+                    <xs:element minOccurs="0" name="receiverFullAddress" nillable="true" type="ax28:ReceiverFullAddress"/>
+                    <xs:element minOccurs="0" name="returnShipmentAddress" nillable="true" type="ax28:ReturnFullAddress"/>
+                    <xs:element minOccurs="0" name="sendEmailNotificationDetail" nillable="true" type="ax28:SendEmailNotificationDetail"/>
+                    <xs:element minOccurs="0" name="senderFullAddress" nillable="true" type="ax28:SenderFullAddress"/>
+                    <xs:element minOccurs="0" name="shipmentFullServiceOptions" nillable="true" type="ax28:ShipmentFullServiceOptions"/>
+                    <xs:element minOccurs="0" name="shipmentPackagesWithAddInfo" nillable="true" type="ax28:ShipmentPackagesWithAddInfo"/>
+                    <xs:element minOccurs="0" name="shipmentPickupInfo" nillable="true" type="ax28:ShipmentPickupInfo"/>
+                    <xs:element minOccurs="0" name="shipmentServiceCode" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BillChargesToDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billDutiesAndTaxesToDetail" nillable="true" type="ax28:BillDutiesAndTaxesToDetail"/>
+                    <xs:element minOccurs="0" name="billShippingChargeToDetail" nillable="true" type="ax28:BillShippingChargeToDetail"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BillDutiesAndTaxesToDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billDutiesAndTaxesToInfo" nillable="true" type="ax28:BillDutiesAndTaxesToInfo"/>
+                    <xs:element minOccurs="0" name="billDutiesAndTaxesToOption" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BillDutiesAndTaxesToInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billToCountryCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billToPostalCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billToUPSAccountNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BillShippingChargeToDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billShippingChargeToInfo" nillable="true" type="ax28:BillShippingChargeToInfo"/>
+                    <xs:element minOccurs="0" name="billShippingChargeToOption" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="BillShippingChargeToInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="associatedShipperUPSAccount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billDeclaredValueChargesToShipper" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billToCountryCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billToPostalCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="billToUPSAccountNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EmailShippingLabelDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="emailShippingLabelIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fromEmailAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="personalMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="recipientEmailAddresses" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CommonFullAddress">
+                <xs:complexContent>
+                    <xs:extension base="ax29:SimpleShipmentAddress">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="addressLine1" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="addressLine2" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="addressLine3" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="companyOrName" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ReceiverFullAddress">
+                <xs:complexContent>
+                    <xs:extension base="ax28:CommonFullAddress">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="additionalParameters" nillable="true" type="ax29:AdditionalParameters"/>
+                            <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ReturnFullAddress">
+                <xs:complexContent>
+                    <xs:extension base="ax28:CommonFullAddress">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="SendEmailNotificationDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="notificationEmailDetails" nillable="true" type="ax28:NotificationEmailDetails"/>
+                    <xs:element minOccurs="0" name="sendEmailNotificationIndicator" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="NotificationEmailDetails">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="emailMessage" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="notificationEmailDetail" nillable="true" type="ax28:NotificationEmailDetail"/>
+                    <xs:element minOccurs="0" name="sendUndeliverableEmail" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="undeliverableEmailAddress" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="NotificationEmailDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="emailDeliveryIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="emailExceptionIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="emailShipIndicator" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SenderFullAddress">
+                <xs:complexContent>
+                    <xs:extension base="ax28:CommonFullAddress">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="additionalParameters" nillable="true" type="ax29:AdditionalParameters"/>
+                            <xs:element minOccurs="0" name="sentBy" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ShipmentFullServiceOptions">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="addtionalParameters" nillable="true" type="ax29:AdditionalParameters"/>
+                    <xs:element minOccurs="0" name="rateServiceOptions" nillable="true" type="ax212:RateServiceOptions"/>
+                    <xs:element minOccurs="0" name="shipmentAdditionalServiceOptions" nillable="true" type="ax28:ShipmentAdditionalServiceOptions"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentAdditionalServiceOptions">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="emailShippingLabelDetail" nillable="true" type="ax28:EmailShippingLabelDetail"/>
+                    <xs:element minOccurs="0" name="schedulePickupDetail" nillable="true" type="ax28:SchedulePickupDetail"/>
+                    <xs:element minOccurs="0" name="sendEmailNotificationDetail" nillable="true" type="ax28:SendEmailNotificationDetail"/>
+                    <xs:element minOccurs="0" name="senderReceiptIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentLabelSize" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipperReleaseIndicator" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SchedulePickupDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentPickupInfo" nillable="true" type="ax28:ShipmentPickupInfo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPickupInfo">
+                <xs:complexContent>
+                    <xs:extension base="ax28:CommonFullAddress">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupByTime" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupDate" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupFloor" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupLocation" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupRoom" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="pickupType" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="readyTime" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackagesWithAddInfo">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentPackageWithAddInfo" nillable="true" type="ax28:ShipmentPackageWithAddInfo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackageWithAddInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentPackageAdditionalInfo" nillable="true" type="ax28:ShipmentPackageAdditionalInfo"/>
+                    <xs:element minOccurs="0" name="shipmentPackageInfo" nillable="true" type="ax29:ShipmentPackage"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackageAdditionalInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentPackageDescriptions" nillable="true" type="ax28:ShipmentPackageDescriptions"/>
+                    <xs:element minOccurs="0" name="shipmentReferences" nillable="true" type="ax28:ShipmentReferences"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackageDescriptions">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentPackageDescription" nillable="true" type="ax28:ShipmentPackageDescription"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackageDescription">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DNCVIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="descriptionOfGoods" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentReferences">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentReference" nillable="true" type="ax28:ShipmentReference"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentReference">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="packageNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentReference1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentReference2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentReferenceBarcode" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="UPSShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="serviceResponse" nillable="true" type="ax29:ResponseHeader"/>
+                    <xs:element minOccurs="0" name="shipmentResponseDetails" nillable="true" type="ax28:ShipmentResponseDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentResponseDetails">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentResponseDetail" nillable="true" type="ax28:ShipmentResponseDetail"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentResponseDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="primaryAirBillNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentDocs" nillable="true" type="ax28:ShipmentDocs"/>
+                    <xs:element minOccurs="0" name="shipmentLabels" nillable="true" type="ax28:ShipmentLabels"/>
+                    <xs:element minOccurs="0" name="shipmentType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="upsServiceDetails" nillable="true" type="ax212:UPSServiceDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentDocs">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentDoc" nillable="true" type="ax28:ShipmentDoc"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentDoc">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="docContent" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="docName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentLabels">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentLabel" nillable="true" type="ax28:ShipmentLabel"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentLabel">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="airBillNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="imageFormat" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="packageNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentLabelContent" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipRatedServiceRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="billChargesToDetail" nillable="true" type="ax28:BillChargesToDetail"/>
+                    <xs:element minOccurs="0" name="receiverFullAddress" nillable="true" type="ax28:ReceiverFullAddress"/>
+                    <xs:element minOccurs="0" name="returnShipmentAddress" nillable="true" type="ax28:ReturnFullAddress"/>
+                    <xs:element minOccurs="0" name="senderFullAddress" nillable="true" type="ax28:SenderFullAddress"/>
+                    <xs:element minOccurs="0" name="shipmentAdditionalServiceOptions" nillable="true" type="ax28:ShipmentAdditionalServiceOptions"/>
+                    <xs:element minOccurs="0" name="shipmentPackageAdditionalInfo" nillable="true" type="ax28:ShipmentPackageAdditionalInfo"/>
+                    <xs:element minOccurs="0" name="shipmentRateEstimateId" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax23="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://voidshipment.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd">
+            <xs:import namespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:complexType name="VoidShipmentRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentNumbers" nillable="true" type="ax23:ShipmentNumbers"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VoidShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="serviceResponse" nillable="true" type="ax23:ResponseHeader"/>
+                    <xs:element minOccurs="0" name="shipmentVoidDetails" nillable="true" type="ax21:ShipmentVoidDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentVoidDetails">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentVoidDetail" nillable="true" type="ax21:ShipmentVoidDetail"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentVoidDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="shipmentNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusDescription" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="voidDescription" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax211="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://rateestimate.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd">
+            <xs:import namespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd"/>
+            <xs:complexType name="RateServiceOptions">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="additionalParameters" nillable="true" type="ax211:AdditionalParameters"/>
+                    <xs:element minOccurs="0" name="carbonNeutralIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="confirmDeliveryIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="deliveryOnSatIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="handlingChargeIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="returnLabelIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="schedulePickupIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentType" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="UPSServiceDetails">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="upsServiceDetail" nillable="true" type="ax210:UPSServiceDetail"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="UPSServiceDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="estimateDelivery" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="pickupBy" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="rateEstimateId" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serviceCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serviceDescription" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serviceFeeDetail" nillable="true" type="ax210:ServiceFeeDetail"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ServiceFeeDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="packageLevelFees" nillable="true" type="ax211:PackageLevelFees"/>
+                    <xs:element minOccurs="0" name="serviceFeeGrandTotal" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="shipmentLevelFee" nillable="true" type="ax211:ShipmentLevelFee"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="UPSServiceDetailRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="serviceOptions" nillable="true" type="ax210:RateServiceOptions"/>
+                    <xs:element minOccurs="0" name="shipFrom" nillable="true" type="ax211:SimpleShipmentAddress"/>
+                    <xs:element minOccurs="0" name="shipTo" nillable="true" type="ax211:SimpleShipmentAddress"/>
+                    <xs:element minOccurs="0" name="shipmentPackages" nillable="true" type="ax211:ShipmentPackages"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="UPSServiceDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="serviceResponse" nillable="true" type="ax211:ResponseHeader"/>
+                    <xs:element minOccurs="0" name="upsServiceDetails" nillable="true" type="ax210:UPSServiceDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://common.v1.speedship2.s3f.soapservice.ws.wwex.com/xsd">
+            <xs:complexType name="AuthenticationToken">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="loginId" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="licenseKey" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>  
+            <xs:complexType name="ShipmentNumbers">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ResponseHeader">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="errorDescriptions" nillable="true" type="ax22:ErrorDescription"/>
+                    <xs:element minOccurs="0" name="notifications" nillable="true" type="ax22:Notification"/>
+                    <xs:element minOccurs="0" name="responseStatusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="responseStatusDescription" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ErrorDescription">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="errorDescription" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Notification">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="notification" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SimpleShipmentAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="city" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="residentialIndicator" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="state" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="AdditionalParameters">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentParameter" nillable="true" type="ax22:ShipmentParameter"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentParameter">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackage">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="additionalParameters" nillable="true" type="ax22:AdditionalParameters"/>
+                    <xs:element minOccurs="0" name="additonalHandling" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codPaymentForm" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codValue" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="confirmDeliveryOption" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="handlingChargeAmount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="handlingChargeUOM" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="height" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insuranceValue" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="largePackage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="length" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="packageNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="packageType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="weight" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="width" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PackageLevelFees">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="packageLevelFee" nillable="true" type="ax22:PackageLevelFee"/>
+                    <xs:element minOccurs="0" name="packageLevelFeesSubTotal" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PackageLevelFee">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="feeItems" nillable="true" type="ax22:FeeItems"/>
+                    <xs:element minOccurs="0" name="packageNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="totalFeePerPackageLevel" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FeeItems">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="feeItem" nillable="true" type="ax22:FeeItem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FeeItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="feeAmount" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="feeDesc" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentLevelFee">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="feeItems" nillable="true" type="ax22:FeeItems"/>
+                    <xs:element minOccurs="0" name="shipmentLevelFeeSubTotal" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShipmentPackages">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="shipmentPackage" nillable="true" type="ax22:ShipmentPackage"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="speedShip2ServiceRequestHeader">
+        <wsdl:part name="parameters" element="ns:authenticationDetail"/>
+    </wsdl:message>    
+    <wsdl:message name="trackUPSShipmentRequest">
+        <wsdl:part name="parameters" element="ns:trackUPSShipment"/>
+    </wsdl:message>
+    <wsdl:message name="trackUPSShipmentResponse">
+        <wsdl:part name="parameters" element="ns:trackUPSShipmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="voidUPSShipmentRequest">
+        <wsdl:part name="parameters" element="ns:voidUPSShipment"/>
+    </wsdl:message>
+    <wsdl:message name="voidUPSShipmentResponse">
+        <wsdl:part name="parameters" element="ns:voidUPSShipmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="shipRatedServiceRequest">
+        <wsdl:part name="parameters" element="ns:shipRatedService"/>
+    </wsdl:message>
+    <wsdl:message name="shipRatedServiceResponse">
+        <wsdl:part name="parameters" element="ns:shipRatedServiceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="shipUPSShipmentRequest">
+        <wsdl:part name="parameters" element="ns:shipUPSShipment"/>
+    </wsdl:message>
+    <wsdl:message name="shipUPSShipmentResponse">
+        <wsdl:part name="parameters" element="ns:shipUPSShipmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getUPSServiceDetailsRequest">
+        <wsdl:part name="parameters" element="ns:getUPSServiceDetails"/>
+    </wsdl:message>
+    <wsdl:message name="getUPSServiceDetailsResponse">
+        <wsdl:part name="parameters" element="ns:getUPSServiceDetailsResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="SpeedShip2ServicePortType">
+        <wsdl:operation name="trackUPSShipment">
+            <wsdl:input message="ns:trackUPSShipmentRequest" wsaw:Action="urn:trackUPSShipment"/>
+            <wsdl:output message="ns:trackUPSShipmentResponse" wsaw:Action="urn:trackUPSShipmentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="voidUPSShipment">
+            <wsdl:input message="ns:voidUPSShipmentRequest" wsaw:Action="urn:voidUPSShipment"/>
+            <wsdl:output message="ns:voidUPSShipmentResponse" wsaw:Action="urn:voidUPSShipmentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="shipRatedService">
+            <wsdl:input message="ns:shipRatedServiceRequest" wsaw:Action="urn:shipRatedService"/>
+            <wsdl:output message="ns:shipRatedServiceResponse" wsaw:Action="urn:shipRatedServiceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="shipUPSShipment">
+            <wsdl:input message="ns:shipUPSShipmentRequest" wsaw:Action="urn:shipUPSShipment"/>
+            <wsdl:output message="ns:shipUPSShipmentResponse" wsaw:Action="urn:shipUPSShipmentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getUPSServiceDetails">
+            <wsdl:input message="ns:getUPSServiceDetailsRequest" wsaw:Action="urn:getUPSServiceDetails"/>
+            <wsdl:output message="ns:getUPSServiceDetailsResponse" wsaw:Action="urn:getUPSServiceDetailsResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SpeedShip2ServiceSoap11Binding" type="ns:SpeedShip2ServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="voidUPSShipment">
+            <soap:operation soapAction="urn:voidUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <soap:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="trackUPSShipment">
+            <soap:operation soapAction="urn:trackUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <soap:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="shipRatedService">
+            <soap:operation soapAction="urn:shipRatedService" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <soap:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="shipUPSShipment">
+            <soap:operation soapAction="urn:shipUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <soap:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUPSServiceDetails">
+            <soap:operation soapAction="urn:getUPSServiceDetails" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <soap:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SpeedShip2ServiceSoap12Binding" type="ns:SpeedShip2ServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="voidUPSShipment">
+            <soap12:operation soapAction="urn:voidUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+                <soap12:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap12:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="trackUPSShipment">
+            <soap12:operation soapAction="urn:trackUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+                <soap12:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap12:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="shipRatedService">
+            <soap12:operation soapAction="urn:shipRatedService" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+                <soap12:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap12:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="shipUPSShipment">
+            <soap12:operation soapAction="urn:shipUPSShipment" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+                <soap12:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap12:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUPSServiceDetails">
+            <soap12:operation soapAction="urn:getUPSServiceDetails" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+                <soap12:header message="ns:speedShip2ServiceRequestHeader" part="parameters" use="literal"></soap12:header>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SpeedShip2Service">
+        <wsdl:port name="SpeedShip2ServiceHttpSoap11Endpoint" binding="ns:SpeedShip2ServiceSoap11Binding">
+            <soap:address location="http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service"/>
+        </wsdl:port>
+        <wsdl:port name="SpeedShip2ServiceHttpSoap12Endpoint" binding="ns:SpeedShip2ServiceSoap12Binding">
+            <soap12:address location="http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

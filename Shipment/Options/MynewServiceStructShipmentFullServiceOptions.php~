@@ -1,0 +1,127 @@
+<?php
+/**
+ * File for class MynewServiceStructShipmentFullServiceOptions
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructShipmentFullServiceOptions originally named ShipmentFullServiceOptions
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructShipmentFullServiceOptions extends MynewServiceWsdlClass
+{
+    /**
+     * The addtionalParameters
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructAdditionalParameters
+     */
+    public $addtionalParameters;
+    /**
+     * The rateServiceOptions
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructRateServiceOptions
+     */
+    public $rateServiceOptions;
+    /**
+     * The shipmentAdditionalServiceOptions
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructShipmentAdditionalServiceOptions
+     */
+    public $shipmentAdditionalServiceOptions;
+    /**
+     * Constructor method for ShipmentFullServiceOptions
+     * @see parent::__construct()
+     * @param MynewServiceStructAdditionalParameters $_addtionalParameters
+     * @param MynewServiceStructRateServiceOptions $_rateServiceOptions
+     * @param MynewServiceStructShipmentAdditionalServiceOptions $_shipmentAdditionalServiceOptions
+     * @return MynewServiceStructShipmentFullServiceOptions
+     */
+    public function __construct($_addtionalParameters = NULL,$_rateServiceOptions = NULL,$_shipmentAdditionalServiceOptions = NULL)
+    {
+        parent::__construct(array('addtionalParameters'=>$_addtionalParameters,'rateServiceOptions'=>$_rateServiceOptions,'shipmentAdditionalServiceOptions'=>$_shipmentAdditionalServiceOptions),false);
+    }
+    /**
+     * Get addtionalParameters value
+     * @return MynewServiceStructAdditionalParameters|null
+     */
+    public function getAddtionalParameters()
+    {
+        return $this->addtionalParameters;
+    }
+    /**
+     * Set addtionalParameters value
+     * @param MynewServiceStructAdditionalParameters $_addtionalParameters the addtionalParameters
+     * @return MynewServiceStructAdditionalParameters
+     */
+    public function setAddtionalParameters($_addtionalParameters)
+    {
+        return ($this->addtionalParameters = $_addtionalParameters);
+    }
+    /**
+     * Get rateServiceOptions value
+     * @return MynewServiceStructRateServiceOptions|null
+     */
+    public function getRateServiceOptions()
+    {
+        return $this->rateServiceOptions;
+    }
+    /**
+     * Set rateServiceOptions value
+     * @param MynewServiceStructRateServiceOptions $_rateServiceOptions the rateServiceOptions
+     * @return MynewServiceStructRateServiceOptions
+     */
+    public function setRateServiceOptions($_rateServiceOptions)
+    {
+        return ($this->rateServiceOptions = $_rateServiceOptions);
+    }
+    /**
+     * Get shipmentAdditionalServiceOptions value
+     * @return MynewServiceStructShipmentAdditionalServiceOptions|null
+     */
+    public function getShipmentAdditionalServiceOptions()
+    {
+        return $this->shipmentAdditionalServiceOptions;
+    }
+    /**
+     * Set shipmentAdditionalServiceOptions value
+     * @param MynewServiceStructShipmentAdditionalServiceOptions $_shipmentAdditionalServiceOptions the shipmentAdditionalServiceOptions
+     * @return MynewServiceStructShipmentAdditionalServiceOptions
+     */
+    public function setShipmentAdditionalServiceOptions($_shipmentAdditionalServiceOptions)
+    {
+        return ($this->shipmentAdditionalServiceOptions = $_shipmentAdditionalServiceOptions);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructShipmentFullServiceOptions
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

@@ -1,0 +1,101 @@
+<?php
+/**
+ * File for class MynewServiceStructUPSServiceDetailResponse
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructUPSServiceDetailResponse originally named UPSServiceDetailResponse
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructUPSServiceDetailResponse extends MynewServiceWsdlClass
+{
+    /**
+     * The serviceResponse
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructResponseHeader
+     */
+    public $serviceResponse;
+    /**
+     * The upsServiceDetails
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var MynewServiceStructUPSServiceDetails
+     */
+    public $upsServiceDetails;
+    /**
+     * Constructor method for UPSServiceDetailResponse
+     * @see parent::__construct()
+     * @param MynewServiceStructResponseHeader $_serviceResponse
+     * @param MynewServiceStructUPSServiceDetails $_upsServiceDetails
+     * @return MynewServiceStructUPSServiceDetailResponse
+     */
+    public function __construct($_serviceResponse = NULL,$_upsServiceDetails = NULL)
+    {
+        parent::__construct(array('serviceResponse'=>$_serviceResponse,'upsServiceDetails'=>$_upsServiceDetails),false);
+    }
+    /**
+     * Get serviceResponse value
+     * @return MynewServiceStructResponseHeader|null
+     */
+    public function getServiceResponse()
+    {
+        return $this->serviceResponse;
+    }
+    /**
+     * Set serviceResponse value
+     * @param MynewServiceStructResponseHeader $_serviceResponse the serviceResponse
+     * @return MynewServiceStructResponseHeader
+     */
+    public function setServiceResponse($_serviceResponse)
+    {
+        return ($this->serviceResponse = $_serviceResponse);
+    }
+    /**
+     * Get upsServiceDetails value
+     * @return MynewServiceStructUPSServiceDetails|null
+     */
+    public function getUpsServiceDetails()
+    {
+        return $this->upsServiceDetails;
+    }
+    /**
+     * Set upsServiceDetails value
+     * @param MynewServiceStructUPSServiceDetails $_upsServiceDetails the upsServiceDetails
+     * @return MynewServiceStructUPSServiceDetails
+     */
+    public function setUpsServiceDetails($_upsServiceDetails)
+    {
+        return ($this->upsServiceDetails = $_upsServiceDetails);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructUPSServiceDetailResponse
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}

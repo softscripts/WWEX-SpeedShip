@@ -1,0 +1,153 @@
+<?php
+/**
+ * File for class MynewServiceStructEmailShippingLabelDetail
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+/**
+ * This class stands for MynewServiceStructEmailShippingLabelDetail originally named EmailShippingLabelDetail
+ * Meta informations extracted from the WSDL
+ * - from schema : http://app6.wwex.com:8080/s3fWebService/services/SpeedShip2Service?wsdl
+
+ * @author Soft Scripts Team <srinivas.nunna@softscripts.net>
+ * @version 20140325-01
+ * @date 2014-03-29
+ */
+class MynewServiceStructEmailShippingLabelDetail extends MynewServiceWsdlClass
+{
+    /**
+     * The emailShippingLabelIndicator
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $emailShippingLabelIndicator;
+    /**
+     * The fromEmailAddress
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $fromEmailAddress;
+    /**
+     * The personalMessage
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $personalMessage;
+    /**
+     * The recipientEmailAddresses
+     * Meta informations extracted from the WSDL
+     * - minOccurs : 0
+     * - nillable : true
+     * @var string
+     */
+    public $recipientEmailAddresses;
+    /**
+     * Constructor method for EmailShippingLabelDetail
+     * @see parent::__construct()
+     * @param string $_emailShippingLabelIndicator
+     * @param string $_fromEmailAddress
+     * @param string $_personalMessage
+     * @param string $_recipientEmailAddresses
+     * @return MynewServiceStructEmailShippingLabelDetail
+     */
+    public function __construct($_emailShippingLabelIndicator = NULL,$_fromEmailAddress = NULL,$_personalMessage = NULL,$_recipientEmailAddresses = NULL)
+    {
+        parent::__construct(array('emailShippingLabelIndicator'=>$_emailShippingLabelIndicator,'fromEmailAddress'=>$_fromEmailAddress,'personalMessage'=>$_personalMessage,'recipientEmailAddresses'=>$_recipientEmailAddresses),false);
+    }
+    /**
+     * Get emailShippingLabelIndicator value
+     * @return string|null
+     */
+    public function getEmailShippingLabelIndicator()
+    {
+        return $this->emailShippingLabelIndicator;
+    }
+    /**
+     * Set emailShippingLabelIndicator value
+     * @param string $_emailShippingLabelIndicator the emailShippingLabelIndicator
+     * @return string
+     */
+    public function setEmailShippingLabelIndicator($_emailShippingLabelIndicator)
+    {
+        return ($this->emailShippingLabelIndicator = $_emailShippingLabelIndicator);
+    }
+    /**
+     * Get fromEmailAddress value
+     * @return string|null
+     */
+    public function getFromEmailAddress()
+    {
+        return $this->fromEmailAddress;
+    }
+    /**
+     * Set fromEmailAddress value
+     * @param string $_fromEmailAddress the fromEmailAddress
+     * @return string
+     */
+    public function setFromEmailAddress($_fromEmailAddress)
+    {
+        return ($this->fromEmailAddress = $_fromEmailAddress);
+    }
+    /**
+     * Get personalMessage value
+     * @return string|null
+     */
+    public function getPersonalMessage()
+    {
+        return $this->personalMessage;
+    }
+    /**
+     * Set personalMessage value
+     * @param string $_personalMessage the personalMessage
+     * @return string
+     */
+    public function setPersonalMessage($_personalMessage)
+    {
+        return ($this->personalMessage = $_personalMessage);
+    }
+    /**
+     * Get recipientEmailAddresses value
+     * @return string|null
+     */
+    public function getRecipientEmailAddresses()
+    {
+        return $this->recipientEmailAddresses;
+    }
+    /**
+     * Set recipientEmailAddresses value
+     * @param string $_recipientEmailAddresses the recipientEmailAddresses
+     * @return string
+     */
+    public function setRecipientEmailAddresses($_recipientEmailAddresses)
+    {
+        return ($this->recipientEmailAddresses = $_recipientEmailAddresses);
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see MynewServiceWsdlClass::__set_state()
+     * @uses MynewServiceWsdlClass::__set_state()
+     * @param array $_array the exported values
+     * @return MynewServiceStructEmailShippingLabelDetail
+     */
+    public static function __set_state(array $_array,$_className = __CLASS__)
+    {
+        return parent::__set_state($_array,$_className);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}
