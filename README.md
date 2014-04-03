@@ -1,4 +1,4 @@
-WWEXSpeedShip-SpeedFreight---Worldwide-Express
+WWEX SpeedShip
 ==============================================
 
-Worldwide Express Launches New Freight and Shipping Technology: SpeedFreight 2.0 and SpeedShip 2.0   and  this   
+Worldwide Express Launches New SpeedShip 2.0
